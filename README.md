@@ -47,7 +47,7 @@ configuration files created:
 module "ecs_app" {
   source = "git@github.com:ElioLopez/ecs-tf-module.git?ref=v0.0.1-dev"
 
-  app_name      = "test-app-dpvo"
+  app_name      = "test-app"
   region        = "eu-central-1"
   environment   = "dev"
 
@@ -91,13 +91,13 @@ Note: the project should be run locally first, so all the AWS resources and conf
 ``` hcl
 terraform {
   backend "s3" {
-    bucket = "test-app-dpvo-terraform-state-dev"
+    bucket = "test-app-terraform-state-dev"
     key    = "terraform.tfstate"
     region = "eu-central-1"
-    profile = "workshop_dpvo_user"
+    profile = "terraform_user"
   }
 }
 ```
 
 And then push all the files to your repo.
-For a working example using this module you can check [this one](https://github.com/freenet-group/dpvo-ecs-tf-sample).
+For a working example using this module you can check [this one](https://github.com/ElioLopez/ecs-tf-sample).
