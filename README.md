@@ -1,6 +1,7 @@
 # ecs-tf-module
 
-![alt text](https://github.com/freenet-group/ecs-tf-module/blob/main/images/terraform_logo.png?raw=true)
+![alt text](https://github.com/ElioLopez/ecs-tf-module/blob/main/images/terraform_logo.png?raw=true)
+
 
 A terraform module to put a sample java app on a ECS fargate cluster. All the required infrastructure and configuration files are automatically generated.
 
