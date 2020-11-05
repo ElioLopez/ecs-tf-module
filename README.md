@@ -2,7 +2,6 @@
 
 ![alt text](https://github.com/ElioLopez/ecs-tf-module/blob/main/images/terraform_logo.png?raw=true)
 
-
 A terraform module to put a sample java app on a ECS fargate cluster. All the required infrastructure and configuration files are automatically generated.
 
 ## This module create the following resources
@@ -46,7 +45,7 @@ configuration files created:
 
 ``` bash
 module "ecs_app" {
-  source = "git@github.com:freenet-group/ecs-tf-module.git?ref=v0.2.5-dev"
+  source = "git@github.com:ElioLopez/ecs-tf-module.git?ref=v0.0.1-dev"
 
   app_name      = "test-app-dpvo"
   region        = "eu-central-1"
