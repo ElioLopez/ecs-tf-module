@@ -1,0 +1,34 @@
+{
+    "executionRoleArn": "${execution_role}",
+    "family": "${family}",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "${container_name}",
+            "image": "Placeholder: GitHub Actions will fill this in",
+            "logConfiguration": {
+               "logDriver": "awslogs",
+               "options": {
+                 "awslogs-group": "${log_group}",
+                 "awslogs-region": "${log_region}",
+                 "awslogs-stream-prefix": "ecs"
+              }
+            },
+            "portMappings": [
+              {
+                "containerPort": ${container_port},
+                "hostPort": ${container_port},
+                "protocol": "tcp"
+               }
+                 ],
+               "essential": true,
+               "entryPoint": [],
+               "command": []
+               }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "${container_cpu}",
+    "memory": "${container_memory}"
+}
